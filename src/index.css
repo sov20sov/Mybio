@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@theme {
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+
+  --color-navy: #0D1B2A;
+  --color-navy-dark: #0A1628;
+  --color-navy-light: #1A2744;
+  --color-card: #111F35;
+  --color-accent: #2E4A7A;
+  --color-highlight: #4A90D9;
+  --color-text-light: #FFFFFF;
+  --color-text-muted: #A0AEC0;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-navy-dark);
+  color: var(--color-text-light);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* Custom selection */
+::selection {
+  background-color: var(--color-highlight);
+  color: #fff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html {
+    cursor: none;
+  }
+  
+  a, button, [role="button"], input, select, textarea {
+    cursor: none;
+  }
+}
