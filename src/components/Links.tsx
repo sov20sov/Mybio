@@ -18,6 +18,12 @@ const STATIC_LINKS: LinkItem[] = [
     name: 'برومبتات ترند الاطفال',
     url: 'https://docs.google.com/document/d/1RuFo0jxOEnGAEDs4NufN5boySWRymyDIq71RxrJg26Y/edit?usp=sharing',
     type: 'document'
+  },
+  {
+    id: 'link_2',
+    name: 'بوت معالجة الصور',
+    url: 'https://t.me/imagehighqualitybot',
+    type: 'document'
   }
 ];
 
