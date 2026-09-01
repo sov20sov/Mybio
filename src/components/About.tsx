@@ -3,7 +3,7 @@ import { useInView } from 'motion/react';
 import { useRef } from 'react';
 
 const STATS = [
-  { label: 'Projects Completed', value: '2+' },
+  { label: 'Projects Completed', value: '4+' },
   { label: 'Certificates', value: '2' },
   { label: 'Years Old', value: '20' },
   { label: 'Skills Areas', value: '3+' },
@@ -30,13 +30,20 @@ export default function About() {
             <div className="space-y-6 text-text-muted font-light leading-relaxed">
               <p>
                 I am a 20-year-old developer and creator based in Al-Aziziya, Iraq. 
-                Currently in my second year as a CS student at Wasit University, I 
-                strive to blend academic rigor with real-world digital execution.
+                Currently in my second year as a Computer Science student at Wasit 
+                University, I combine academic learning with hands-on work in software 
+                engineering, product thinking, and digital design.
               </p>
               <p>
-                Whether I'm architecting scalable full-stack applications or editing 
-                high-impact visual content, my approach is the same: rigorous attention 
-                to detail, geometric precision, and an unwavering commitment to quality.
+                My work spans full-stack application development, digital systems, and 
+                visual storytelling. From healthcare platforms and finance dashboards to 
+                educational experiences and brand-led creative work, I focus on building 
+                polished, useful products with precision, structure, and creativity.
+              </p>
+              <p>
+                Whether I&apos;m architecting secure systems or shaping content for impact, 
+                my approach remains consistent: thoughtful execution, technical clarity, and 
+                a strong commitment to quality in every detail.
               </p>
             </div>
           </div>

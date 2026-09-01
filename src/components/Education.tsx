@@ -36,8 +36,10 @@ export default function Education() {
                 Computer Science & Information Technology
               </h4>
                <p className="text-sm text-text-muted font-light leading-relaxed max-w-xl">
-                 Currently engaged in rigorous academic studies, bridging fundamental computer science 
-                 theories with practical software engineering applications.
+                 Currently engaged in rigorous academic study, bridging fundamental computer science
+                 concepts with practical software engineering and digital problem-solving. My focus is on
+                 building a strong foundation in systems thinking, programming, and modern technology
+                 application in real-world contexts.
                </p>
             </div>
 
