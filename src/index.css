@@ -1,18 +1,18 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 @theme {
   --font-display: "Bebas Neue", sans-serif;
   --font-body: "DM Sans", sans-serif;
 
-  --color-navy: #0D1B2A;
-  --color-navy-dark: #0A1628;
-  --color-navy-light: #1A2744;
-  --color-card: #111F35;
-  --color-accent: #2E4A7A;
-  --color-highlight: #4A90D9;
-  --color-text-light: #FFFFFF;
-  --color-text-muted: #A0AEC0;
+  --color-navy: #0d1b2a;
+  --color-navy-dark: #0a1628;
+  --color-navy-light: #1a2744;
+  --color-card: #111f35;
+  --color-accent: #2e4a7a;
+  --color-highlight: #4a90d9;
+  --color-text-light: #ffffff;
+  --color-text-muted: #a0aec0;
 }
 
 :root {
@@ -36,12 +36,154 @@ body {
   color: #fff;
 }
 
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top, rgba(74, 144, 217, 0.18), transparent 30%),
+    linear-gradient(135deg, rgba(10, 22, 40, 1) 0%, rgba(13, 27, 42, 1) 100%);
+}
+
+.loading-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+}
+
+.loading-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loading-brand {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6rem);
+  letter-spacing: 0.12em;
+  color: var(--color-text-light);
+  line-height: 1;
+}
+
+.loading-brand span {
+  color: var(--color-highlight);
+}
+
+.loading-bar {
+  position: relative;
+  width: min(20rem, 70vw);
+  height: 0.5rem;
+  border-radius: 999px;
+  background: rgba(160, 174, 192, 0.18);
+  overflow: hidden;
+  border: 1px solid rgba(74, 144, 217, 0.2);
+}
+
+.loading-bar-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 36%;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    var(--color-highlight),
+    #8ec5ff,
+    var(--color-highlight)
+  );
+  box-shadow: 0 0 18px rgba(74, 144, 217, 0.9);
+  animation: loadingPulse 1.3s ease-in-out infinite;
+}
+
+.loading-text {
+  font-size: 0.72rem;
+  letter-spacing: 0.38rem;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.loading-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(18px);
+  opacity: 0.8;
+  animation: floatOrb 4s ease-in-out infinite;
+}
+
+.orb-one {
+  width: 16rem;
+  height: 16rem;
+  background: rgba(74, 144, 217, 0.18);
+  top: 18%;
+  left: 18%;
+}
+
+.orb-two {
+  width: 22rem;
+  height: 22rem;
+  background: rgba(42, 74, 122, 0.2);
+  bottom: 12%;
+  right: 14%;
+  animation-delay: 1s;
+}
+
+.orb-three {
+  width: 14rem;
+  height: 14rem;
+  background: rgba(140, 180, 255, 0.12);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 0.6s;
+}
+
+@keyframes loadingPulse {
+  0% {
+    transform: translateX(-45%);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(160%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(280%);
+    opacity: 0.6;
+  }
+}
+
+@keyframes floatOrb {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.08);
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   html {
     cursor: none;
   }
-  
-  a, button, [role="button"], input, select, textarea {
+
+  a,
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea {
     cursor: none;
   }
 }
