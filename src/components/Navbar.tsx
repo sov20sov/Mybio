@@ -1,8 +1,9 @@
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Download, Menu, X } from 'lucide-react';
 
-const NAV_LINKS = ['About', 'Skills', 'Projects', 'Experience', 'Education', 'Certificates', 'Links', 'Contact'];
+const NAV_LINKS = ['About', 'Skills', 'Projects', 'Experience', 'Education', 'Certificates', 'Contact'];
+const CV_PATH = '/assets/cv/Hussein-Mohammed-CV.pdf';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -58,7 +59,7 @@ export default function Navbar() {
           HM<span className="text-highlight">.</span>
         </a>
         
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex items-center gap-4 lg:gap-8">
           {NAV_LINKS.map((link) => (
             <a
               key={link}
@@ -71,6 +72,14 @@ export default function Navbar() {
               {link}
             </a>
           ))}
+          <a
+            href={CV_PATH}
+            download="Hussein-Mohammed-CV.pdf"
+            className="inline-flex items-center gap-2 rounded-md border border-highlight px-3 py-2 text-xs font-medium text-highlight transition-all hover:bg-highlight hover:text-white hover:shadow-[0_0_18px_rgba(74,144,217,0.45)] lg:px-4 lg:text-sm"
+          >
+            <Download size={16} aria-hidden="true" />
+            Download CV
+          </a>
         </div>
 
         {/* Mobile menu toggle */}
@@ -102,6 +111,14 @@ export default function Navbar() {
                 {link}
               </a>
             ))}
+            <a
+              href={CV_PATH}
+              download="Hussein-Mohammed-CV.pdf"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-highlight px-4 py-3 text-lg font-medium text-highlight transition-all hover:bg-highlight hover:text-white hover:shadow-[0_0_18px_rgba(74,144,217,0.45)]"
+            >
+              <Download size={18} aria-hidden="true" />
+              Download CV
+            </a>
           </div>
         </motion.div>
       )}

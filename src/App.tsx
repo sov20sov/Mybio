@@ -7,7 +7,6 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Certificates from './components/Certificates';
-import Links from './components/Links';
 import Contact from './components/Contact';
 import CustomCursor from './components/CustomCursor';
 
@@ -53,7 +52,6 @@ export default function App() {
             <Experience />
             <Education />
             <Certificates />
-            <Links />
             <Contact />
           </main>
         </>

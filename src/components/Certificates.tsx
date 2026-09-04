@@ -15,7 +15,15 @@ const CERTIFICATES = [
     issuer: "Hashemite Kingdom of Jordan",
     flag: "🇯🇴",
     image: "/images/JORDN.jpg"
-  }
+  },
+
+  {
+  title: "شهادة إتمام دورة تدريبية في التجارة الإلكترونية والدخل الرقمي وريادة الأعمال",
+  issuer: "Elite Training and Development Team",
+  flag: "IQ",
+  image: "/images/NEW.jpg"
+}
+
 ];
 
 export default function Certificates() {

@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram, GithubIcon } from 'lucide-react';
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -88,6 +88,16 @@ export default function Contact() {
             <a href="https://t.me/husTh1" target="_blank" rel="noreferrer" className="text-text-muted hover:text-highlight transition-colors" aria-label="Telegram">
               <TelegramIcon className="w-5 h-5" />
             </a>
+
+           <a
+            href="https://github.com/husTh1"
+            target="_blank"
+            rel="noreferrer"
+            className="text-text-muted hover:text-highlight transition-colors"
+            aria-label="GitHub"
+          >
+            <GithubIcon className="w-5 h-5" />
+          </a>
           </div>
           <div className="text-sm text-text-muted font-light tracking-wide flex items-center gap-2">
             <span>&copy; {currentYear}</span>

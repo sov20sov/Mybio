@@ -53,10 +53,7 @@ export default function Hero() {
               />
             </div>
           </div>
-          
-          <h2 className="text-highlight font-medium tracking-wide uppercase mb-4 text-sm md:text-base">
-            Portfolio
-          </h2>
+        
           <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-text-light tracking-tight mb-6 leading-none text-center">
             Hussein Mohammed
           </h1>
@@ -68,7 +65,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-xl md:text-2xl text-text-muted max-w-2xl font-light h-16"
         >
-          <TypewriterText text="Full-Stack Developer & Video Editor" />
+          <TypewriterText text="Front End Developer & Video Editor" />
         </motion.div>
 
         <motion.div
